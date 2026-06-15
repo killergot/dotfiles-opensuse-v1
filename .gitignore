@@ -1,0 +1,22 @@
+.DS_Store
+*.swp
+*~
+
+# Backups created by scripts/install.sh
+.dotfiles-backup-*
+
+# Runtime/cache files that should not be committed accidentally.
+**/Cache/
+**/Code Cache/
+**/GPUCache/
+**/Crashpad/
+**/*.db
+**/*.db-shm
+**/*.db-wal
+
+# fish may leave temporary universal-variable files during writes.
+fish/.config/fish/fish_variables*
+!fish/.config/fish/fish_variables
+
+# qutebrowser writes machine/browser state here.
+qutebrowser/.config/qutebrowser/autoconfig.yml
