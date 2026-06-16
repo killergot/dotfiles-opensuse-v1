@@ -1,0 +1,12 @@
+default-timeout=60000
+ignore-timeout=1
+
+on-button-left=invoke-default-action
+on-button-right=dismiss
+
+[urgency=critical]
+default-timeout=0
+ignore-timeout=0
+
+[summary~=".*[Ss]creenshot.*|.*[Сс]крин.*"]
+on-button-left=exec sh -c 'file=$(find "$HOME/Pictures/Screenshots" -maxdepth 1 -type f -name "*.png" -printf "%T@ %p\n" | sort -nr | head -n1 | cut -d" " -f2-); [ -n "$file" ] && xdg-open "$file"'

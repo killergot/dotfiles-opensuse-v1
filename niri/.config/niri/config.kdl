@@ -6,6 +6,11 @@
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
 
+cursor {
+    xcursor-theme "Capitaine Cursors (Gruvbox) - White"
+    xcursor-size 24
+}
+
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Input

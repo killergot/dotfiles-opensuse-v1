@@ -13,6 +13,7 @@ Each top-level directory is a package:
 - `kitty` -> `.config/kitty`
 - `btop` -> `.config/btop`
 - `niri` -> `.config/niri`
+- `mako` -> `.config/mako`
 - `qutebrowser` -> `.config/qutebrowser/config.py`
 - `thunar` -> `.config/Thunar`
 
