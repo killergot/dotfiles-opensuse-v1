@@ -14,7 +14,8 @@ Each top-level directory is a package:
 - `btop` -> `.config/btop`
 - `niri` -> `.config/niri`
 - `mako` -> `.config/mako`
-- `qutebrowser` -> `.config/qutebrowser/config.py`
+- `qutebrowser` -> `.config/qutebrowser`
+- `nvim` -> `.config/nvim`
 - `thunar` -> `.config/Thunar`
 
 ## Install on a new system
@@ -48,7 +49,7 @@ If `stow` is installed, the same package layout can be used directly:
 
 ```sh
 cd ~/dotfiles
-stow -t "$HOME" shell fish kitty btop niri qutebrowser thunar readline vieb
+stow -t "$HOME" shell fish kitty btop niri qutebrowser nvim thunar readline vieb
 ```
 
 On openSUSE, install stow with:
@@ -59,20 +60,20 @@ sudo zypper install stow
 
 ## Add a new config
 
-Example for a future `nvim` config:
+Example for a future app config:
 
 ```sh
-mkdir -p ~/dotfiles/nvim/.config
-cp -a ~/.config/nvim ~/dotfiles/nvim/.config/
+mkdir -p ~/dotfiles/app/.config
+cp -a ~/.config/app ~/dotfiles/app/.config/
 cd ~/dotfiles
-git add nvim
-git commit -m "Add nvim config"
+git add app
+git commit -m "Add app config"
 ```
 
 Then install it on another machine:
 
 ```sh
-./scripts/install.sh nvim
+./scripts/install.sh app
 ```
 
 ## Do not commit

@@ -25,3 +25,7 @@ test -z "$PROFILEREAD" && . /etc/profile || true
 #fi
 
 . "$HOME/.local/share/../bin/env"
+
+# >>> Codex installer >>>
+export PATH="/home/rub/.local/bin:$PATH"
+# <<< Codex installer <<<
