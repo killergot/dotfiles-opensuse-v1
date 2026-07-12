@@ -194,9 +194,32 @@ vim.api.nvim_create_user_command("VimHelpMenu", open_vim_help, {})
 vim.api.nvim_create_user_command("LspHelpMenu", open_lsp_help, {})
 
 
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = {
+    "compose.yml",
+    "compose.yaml",
+    "docker-compose*.yml",
+    "docker-compose*.yaml",
+  },
+  callback = function(event)
+    vim.bo[event.buf].filetype = "yaml.docker-compose"
+  end,
+})
+
 -- enable my LSP servers in ~/.config/nvim/lsp/..
-vim.lsp.enable("pyright")
-vim.lsp.enable("ruff")
+for _, server in ipairs({
+  "pyright",
+  "ruff",
+  "dockerls",
+  "docker_compose_language_service",
+  "rust_analyzer",
+  "ts_ls",
+  "vue_ls",
+  "gopls",
+  "lua_ls",
+}) do
+  vim.lsp.enable(server)
+end
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(event)
